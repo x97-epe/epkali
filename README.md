@@ -13,16 +13,16 @@ it is possible to access the course lab environemn.
   - starter.sh: Image startup script
 
 ## Minimal Documentation
-Download the ZIP file with the VPN certificate and config-file give by the course. Uncompress file into a local directory not in same folder as this project (SECRETS_DIR). Take note of the OpenVPN config file name to be use.
+Download the ZIP file with the VPN certificate and config-file give by the course. Uncompress file into a local directory not in same folder as this project (SECRETS_DIR). Take note of the OpenVPN config file name to be use. Create a text file (local_hosts) into SECRETS_DIR with the IP/HOSTNAME used for course VPN (file is appended to (etc/hosts of container) 
 
 ### To build the image:
-Edit config/starter.sh by setting the required VPN config-file into parameters.
+Edit config/starter.sh by setting the required VPN config-file and extra hosts-file into parameters.
 Run:
 
 docker build -t <name>:<version_num> .
 
 ### To run the container:
-Start the container from image, Linux Kali in container will start and OpenVPN will connct to course VPN. Please note: OpenVPN is the main service running into containr and logs will be printed on stdout.
+Start the container from image, Linux Kali in container will start and OpenVPN will connect to course VPN. Please note: OpenVPN is the main service running into containr and logs will be printed on stdout.
 
 docker run --rm --cap-add=NET_ADMIN --device=/dev/net/tun -v <SECRET_DIR>:/secrets x97epe/epkali:<version_num>
 
