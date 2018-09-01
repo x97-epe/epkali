@@ -24,7 +24,7 @@ docker build -t <name>:<version_num> .
 ### To run the container:
 Start the container from image, Linux Kali in container will start and OpenVPN will connect to course VPN. Please note: OpenVPN is the main service running into containr and logs will be printed on stdout.
 
-docker run --rm --cap-add=NET_ADMIN --device=/dev/net/tun -v <SECRET_DIR>:/secrets x97epe/epkali:<version_num>
+docker run --rm --cap-add=NET_ADMIN --device=/dev/net/tun -v <SECRETS_DIR>:/secrets x97epe/epkali:<version_num>
 
 If the OpenVPN successfully starts, open a second terminal on your machine, check the container ID of running Linux Kali and connect to it by running:
 
