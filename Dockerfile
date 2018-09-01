@@ -6,6 +6,7 @@ RUN apt-get update \
  && apt-get dist-upgrade -y \
  && apt-get install metasploit-framework -y \
  && apt-get install traceroute -y \
+ && apt-get install dnsutils -y \
  && apt-get install openvpn -y \
  && apt autoremove -y 
 
