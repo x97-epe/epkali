@@ -28,7 +28,7 @@ docker run --rm --cap-add=NET_ADMIN --device=/dev/net/tun -v <SECRETS_DIR>:/secr
 
 If the OpenVPN successfully starts, open a second terminal on your machine, check the container ID of running Linux Kali and connect to it by running:
 
-docker exec -it <<container-id>> /bin/bash
+docker exec -it \<container-id\> /bin/bash
 
 A running terminal inside the container will open with access to Lab-system
 Enjoy!
