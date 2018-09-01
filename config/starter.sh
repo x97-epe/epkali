@@ -1,17 +1,18 @@
 #!/bin/sh
 # Simple script to config Kali and Start OpenVPN
 
-## Configure
+## Configuration Parameters
 VPN=world201-vpn_s3.ovpn
+HOSTSFILE=local_hosts
 
+#Internal Image config
 SECRETS_DIR=/secrets
 VPN_CONF_DIR=/etc/openvpn
-HOSTSFILE=/tmp/local_hosts
 
 ##Main
 echo "Configure Hosts file"
-if [ -r $HOSTSFILE ];then
-	/bin/cat $HOSTSFILE >> /etc/hosts
+if [ -r $SECRETS_DIR/$HOSTSFILE ];then
+	/bin/cat $SECRETS_DIR/$HOSTSFILE >> /etc/hosts
 else
 	echo "Error: Hosts file $HOSTSFILE does NOT exist"
 	exit 1

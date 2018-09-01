@@ -9,8 +9,7 @@ RUN apt-get update \
  && apt-get install openvpn -y \
  && apt autoremove -y 
 
-#Configure Kali System to use Course hosts and start OpenVPN
-ADD config/local_hosts /tmp/
+#Install Configuration installer and OpenVPN starter
 ADD config/starter.sh /usr/local/sbin
 
 #Start OpenVPN service
