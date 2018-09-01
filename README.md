@@ -19,7 +19,7 @@ Download the ZIP file with the VPN certificate and config-file give by the cours
 Edit config/starter.sh by setting the required VPN config-file into parameters.
 Run:
 
-docker build -t x97epe/epkali:<version_num> .
+docker build -t <name>:<version_num> .
 
 ###To run the container:
 Start the container from image, Linux Kali in container will start and OpenVPN will connct to course VPN. Please note: OpenVPN is the main service running into containr and logs will be printed on stdout.
@@ -30,9 +30,13 @@ If the OpenVPN successfully starts, open a second terminal on your machine, chec
 
 docker exec -it <container-id> /bin/bash
 
+<<<<<<< HEAD
 A running terminal inside the container will open with access to Lab-system
 Enjoy!
+=======
+docker run -t -i <name> --rm /bin/bash
+>>>>>>> a43939f2009bf813cc2ba8b3e1e7fd09c61cc5e9
 
 ###To push the image to Docker.io
 
-docker push x97epe/epkali:<version_num>
+docker push <name>:<version_num>
