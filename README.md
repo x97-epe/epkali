@@ -3,7 +3,7 @@ Linux Kali, with updates and tools for course EP272U.
 
 This project builds a Linux-Kaly images running OpenVPN to connect to
 KTH EP272U course cyber spaces. By attaching a bash to the runnig container
-it is possible to access the course lab environemn.
+it is possible to access the course lab environement.
 
 ## Files:
 - Dockerfile: Docker build instructions
